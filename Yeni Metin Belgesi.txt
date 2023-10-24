@@ -1,0 +1,43 @@
+#include <LiquidCrystal_I2C.h>
+#include <dht11.h>
+#define DHT11_PIN 2
+#define TRIGGER_PIN 3
+#define ECHO_PIN 4
+
+LiquidCrystal_I2C lcd(0x27, 16, 2); // I2C address may vary, use the correct address for your LCD
+
+dht11 DHT11;
+long duration;
+int distance;
+
+void setup() {
+  lcd.begin(16, 2);  // Initialize the LCD
+  lcd.print("Distance:");  // Display a static text
+  lcd.setCursor(0, 1);
+  lcd.print("Temperature:");
+  pinMode(TRIGGER_PIN, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
+}
+
+void loop() {
+  // Read distance from ultrasonic sensor
+  digitalWrite(TRIGGER_PIN, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIGGER_PIN, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIGGER_PIN, LOW);
+  duration = pulseIn(ECHO_PIN, HIGH);
+  distance = duration * 0.034 / 2;
+
+  // Read temperature from DHT11 sensor
+  int chk = DHT11.read(DHT11_PIN);
+  float temperature = DHT11.temperature;
+
+  // Print data to LCD
+  lcd.setCursor(10, 0);
+  lcd.print(distance);
+  lcd.setCursor(12, 1);
+  lcd.print(temperature);
+
+  delay(1000);  // Delay for 1 second
+}
