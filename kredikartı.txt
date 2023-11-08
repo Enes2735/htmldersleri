@@ -1,0 +1,115 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(kredikart());
+}
+
+class kredikart extends StatelessWidget {
+  const kredikart({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          leading: Icon(Icons.arrow_back_ios, color: Colors.black),
+          title: Text(
+
+
+            "Debit Cart",
+            style: TextStyle(color: Colors.black) ,
+
+
+
+          ),
+          actions: [Icon(Icons.settings, color: Colors.black)],
+        ),
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          child: Column(
+              children: [
+              Image.asset("images/kredikart.png"),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(15),
+                            )),
+                        height: 150,
+                        width: 150,
+                        child: 
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.ac_unit_outlined),
+                              Text("Abc"),
+                            ],
+                          )
+                      ),
+                    ],
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.purple,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(15),
+                        )),
+                    height: 150,
+                    width: 150,
+                    child:  Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.ac_unit_outlined),
+                        Text("Abc"),
+                      ],
+                    )
+
+
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(15),
+                        )),
+                    height: 150,
+                    width: 150,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.ac_unit_outlined),
+                        Text("Abc")
+                      ],
+                    )
+
+
+                  ),
+                )
+              ]
+          ),
+],
+        ),
+
+      ),
+    ),
+    );
+    }
+}
