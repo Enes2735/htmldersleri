@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>proje</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card" style="width:18rem;">
+                    <img src="resim/img1.jpg" class="card-img-top" />
+                    <div class="card-body">
+                        <h5>KART BAŞLIĞI</h5>
+                        <p>kart hakkındaki bilgiler</p>
+                        <a href="#" class="btn btn-danger">LİNK</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+
+                <div class="card" style="width:18rem;">
+                    <img src="resim/img1.jpg" class="card-img-top" />
+                    <div class="card-body">
+                        <h5>KART BAŞLIĞI</h5>
+                        <p>kart hakkındaki bilgiler</p>
+                        <a href="#" class="btn btn-danger">LİNK</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+
+                <div class="card" style="width:18rem;">
+                    <img src="resim/img1.jpg" class="card-img-top" />
+                    <div class="card-body">
+                        <h5>KART BAŞLIĞI</h5>
+                        <p>kart hakkındaki bilgiler</p>
+                        <a href="#" class="btn btn-danger">LİNK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+
+</body>
+</html>
