@@ -2,49 +2,105 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>proje</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <title>grid hizalama</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container m-5 ">
+        <h3 class="text-center my-3">RESİMLER</h3>
         <div class="row">
             <div class="col-sm">
-                <div class="card" style="width:18rem;">
-                    <img src="resim/img1.jpg" class="card-img-top" />
+                <div class="card">
+                    <div class="card-header">MANZARA</div>
+                    <img src="resim/images.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h5>KART BAŞLIĞI</h5>
-                        <p>kart hakkındaki bilgiler</p>
-                        <a href="#" class="btn btn-danger">LİNK</a>
+                        <h5 class="card-title">resim</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Resim</h6>
+                        <p class="card-text">aspdfojsıjfıdsljfds</p>
+                        <a href="#" class="btn btn-success">Video İçin Tıklayınız</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm">
-
-                <div class="card" style="width:18rem;">
-                    <img src="resim/img1.jpg" class="card-img-top" />
+                <div class="card">
+                    <div class="card-header">MANZARA</div>
+                    <img src="resim/images.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h5>KART BAŞLIĞI</h5>
-                        <p>kart hakkındaki bilgiler</p>
-                        <a href="#" class="btn btn-danger">LİNK</a>
+                        <h5 class="card-title">resim</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Resim</h6>
+                        <p class="card-text">aspdfojsıjfıdsljfds</p>
+                        <a href="#" class="btn btn-success">Video İçin Tıklayınız</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm">
-
-                <div class="card" style="width:18rem;">
-                    <img src="resim/img1.jpg" class="card-img-top" />
+                <div class="card">
+                    <div class="card-header">MANZARA</div>
+                    <img src="resim/images.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h5>KART BAŞLIĞI</h5>
-                        <p>kart hakkındaki bilgiler</p>
-                        <a href="#" class="btn btn-danger">LİNK</a>
+                        <h5 class="card-title">resim</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Resim</h6>
+                        <p class="card-text">aspdfojsıjfıdsljfds</p>
+                        <a href="#" class="btn btn-success">Video İçin Tıklayınız</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card col-12 my-4">
+                    <div class="card-header">
+                        rrrrr
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>gahsfdasgdfasghdfsgafdghasfdt</p>
+                            <footer class="blockquote-footer">
+                                rasdtasfdhfahsdgsadgasdxvgasvc
+                                <cite title="Source Title">kaynak</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            yyuuyuyu
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">aaaaa</li>
+                            <li class="list-group-item">aaaa</li>
+                            <li class="list-group-item">aaaa</li>
+                        </ul>
+                        <div class="card-footer">
+                            <a href="#" class="card-link">link</a>
+                            <a href="#" class="card-link">link</a>
+                        </div>
+                    </div>
+                    <div class="card text-dark bg-info mb-3 my-3">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">sfdsdfsdf</h5>
+                            <p class="card-text">asdafsffsdfsdfdsfds</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8">
+                    <div class="card mb-3">
+                        <img src="resim/img1.jpg" alt="Alternate Text" />
+                        <div class="card-title">
+                            <h5 class="card-title">card tittle</h5>
+                            <p class="card-text">
+                                kjashdgyasgdbaxzchjasbdhnabsnzbxcnzbxcnbzxcbnzxbcz
+                                sjdnasmndasmdmöasdmöasndmnasmdnasmdnmansdmsndmsndmas
+                                asdkjnadjyhvfhadbshfabgdhcbhjsbmzxnnbdhhhhhhhhhhbccc
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-    
-    
-
 </body>
 </html>
