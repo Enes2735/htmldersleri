@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>table</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-3">
+        <h2>renklendirme sakjdklasjdklsahdjksadhukzxycuhzjxbcjk</h2>
+
+        <table class="table table-primary table-borderless">
+            <thead>
+                <tr>
+                    <th>ad soyad mail</th>
+                    <th>ad soyad mail</th>
+                    <th>ad soyad mail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>ad soyad mail</th>
+                    <th>ad soyad mail</th>
+                    <th>ad soyad mail</th>
+                </tr>
+                <tr>
+                    <th>ad soyad mail</th>
+                    <th>ad soyad mail</th>
+                    <th>ad soyad mail</th>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="container mt-3">
+        <h2>renklendirme satır sutun</h2>
+
+        <table class="table table-success">
+            <thead>
+                <tr>
+                    <th>ad</th>
+                    <th>soyad</th>
+                    <th>mail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table table-warning">
+                    <th>ad</th>
+                    <th>soyad</th>
+                    <th>mail</th>
+                </tr>
+                <tr class="table table-secondary">
+                    <th>ad</th>
+                    <th>soyad</th>
+                    <th>mail</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-responsive">
+        <table class="table align-middle caption top">
+            <caption>Tablo Bilgisi Ekler</caption>
+            <thead class="table table-dark">
+                <tr>
+                    <td>yazı</td>
+                    <td>yazı</td>
+                    <td>yazıı</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  class="table table-warning">
+                    <td>ortalanmış/vertical-align:middle;</td>
+                    <td>ortalanmış/vertical-align:middle;</td>
+                    <td>T9odfugıdufgufdhgjfghfjghdfjkdfhfudhvkdfjhfjhkjgjhjghugfhgfjhgdjkhgjkdhguhdjghjhjhfhi</td>
+                </tr>
+                <tr class="align-bottom table table-success">
+                    <td>satırın en altına/vertical-align:bottom;</td>
+                    <td>satırın en altına/vertical-align:bottom;</td>
+                    <td>sdfds fsdnfbgdgfdn gbdfhgbhmdfvbn fdjvnvmcvöcfögmöçmödmgöçdxdfxfdggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggmhökkfbndstbhsdbg.</td>
+                </tr>
+                <tr class="table table-primary">
+                    <td>Tghfhfhstrafghfghfhfghgfhfhgfhfghls.</td>
+                    <td>ortalanmış  vertical-align:middle;</td>
+                    <td class="align-top">sütunun en üstüne  vertical-align:top;    awsdasdasdasssssssssssssssdsssssssssddddddddddddssssssssssssssdddddddddddddddsssssssssssdddddddddddddddsssss
+                    ssssssssssddddddddddddddsssssssssssssddddddddddddddss
+                    ssssssssssd</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <table class="table align-middle caption top">
+            <caption>Tablo Bilgisi Ekler</caption>
+            <thead class="table table-dark">
+                <tr class="table table-primary">
+                    <td>yazı</td>
+                    <td>yazı</td>
+                    <td>yazıı</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+</html>
