@@ -1,241 +1,125 @@
-
-import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const yemek());
+  runApp(const MyApp());
 }
 
-class yemek extends StatefulWidget {
-  const yemek({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-  @override
-  State<yemek> createState() => _yemekState();
-}
-
-class _yemekState extends State<yemek> {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          centerTitle: true,
-          title: Text(
-            "Bugün Ne yesem?",
-            style: TextStyle(fontSize: 40, color: Colors.white),
-          ),
-        ),
-        body: MenuYemek(),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        // This is the theme of your application.
+        //
+        // TRY THIS: Try running your application with "flutter run". You'll see
+        // the application has a blue toolbar. Then, without quitting the app,
+        // try changing the seedColor in the colorScheme below to Colors.green
+        // and then invoke "hot reload" (save your changes or press the "hot
+        // reload" button in a Flutter-supported IDE, or press "r" if you used
+        // the command line to start the app).
+        //
+        // Notice that the counter didn't reset back to zero; the application
+        // state is not lost during the reload. To reset the state, use hot
+        // restart instead.
+        //
+        // This works for code too, not just values: Most code changes can be
+        // tested with just a hot reload.
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class MenuYemek extends StatefulWidget {
-  const MenuYemek({super.key});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  // This widget is the home page of your application. It is stateful, meaning
+  // that it has a State object (defined below) that contains fields that affect
+  // how it looks.
+
+  // This class is the configuration for the state. It holds the values (in this
+  // case the title) provided by the parent (in this case the App widget) and
+  // used by the build method of the State. Fields in a Widget subclass are
+  // always marked "final".
+
+  final String title;
 
   @override
-  State<MenuYemek> createState() => _MenuYemekState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MenuYemekState extends State<MenuYemek> {
-  int sayi = 1;
-  int sayi1 = 1;
-  int sayi2 = 1;
-  int topla=0;
-  List corbaadlar = [
-    'Mercimek Çorbası',
-    'Tarhana Çorbası',
-    'Tavuk Çorbası',
-    'Kellepaça Çorbası',
-    'Yayla Çorbası'
-  ];
-  List tatliadlar = ['Kadayıf', 'Baklava','Sütlaç', 'Kazandibi' , 'dondurma'];
-  List yemekadlar = ['Karnıyarık', 'Mantı', 'Fasulye', 'İçliköfte', 'Balık'];
-  List corbafiyatlar = [50, 160, 70, 80, 50];
-  List tatlifiyatlar = [50, 60, 170, 80, 50];
-  List yemekfiyatlari = [150, 60, 170, 80, 50];
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
 
+  void _incrementCounter() {
+    setState(() {
+      // This call to setState tells the Flutter framework that something has
+      // changed in this State, which causes it to rerun the build method below
+      // so that the display can reflect the updated values. If we changed
+      // _counter without calling setState(), then the build method would not be
+      // called again, and so nothing would appear to happen.
+      _counter++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: double.infinity,
-      width: double.infinity,
-      child: Center(
+    // This method is rerun every time setState is called, for instance as done
+    // by the _incrementCounter method above.
+    //
+    // The Flutter framework has been optimized to make rerunning build methods
+    // fast, so that you can just rebuild anything that needs updating rather
+    // than having to individually change instances of widgets.
+    return Scaffold(
+      appBar: AppBar(
+        // TRY THIS: Try changing the color here to a specific color (to
+        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
+        // change color while the other colors stay the same.
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: Text(widget.title),
+      ),
+      body: Center(
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
         child: Column(
-          children: [
-            Expanded(
-              child: InkWell(
-                onTap: () {
-                  sayi = rastgelesayi();
-                  Yenile();
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          if (sayi > 1) {
-                            sayi--;
-                          }
-                        });
-                      },
-                      child: Text("<"),
-                    ),
-                    Image.asset(
-                      "images/corba_$sayi.jpg",
-                      height: 150,
-                      width: 150,
-                    ),
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          if(sayi<5)
-                          {
-                              sayi++;
-                          }
-                        });
-                      },
-                      child: Text(">"),
-                    ),
-                  ],
-
-                ),
-              ),
+          // Column is also a layout widget. It takes a list of children and
+          // arranges them vertically. By default, it sizes itself to fit its
+          // children horizontally, and tries to be as tall as its parent.
+          //
+          // Column has various properties to control how it sizes itself and
+          // how it positions its children. Here we use mainAxisAlignment to
+          // center the children vertically; the main axis here is the vertical
+          // axis because Columns are vertical (the cross axis would be
+          // horizontal).
+          //
+          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
+          // action in the IDE, or press "p" in the console), to see the
+          // wireframe for each widget.
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'You have pushed the button this many times:',
             ),
-
-
-            Text("Fiyat="+corbafiyatlar[sayi-1].toString()),
-            Text(corbaadlar[sayi - 1]),
-            SizedBox(
-              width: 200,
-              child: Divider(
-                height: 5,
-              ),
-            ),
-            Expanded(
-              child: InkWell(
-                onTap: () {
-                  sayi1 = rastgelesayi();
-                  Yenile();
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          if (sayi1 > 1) {
-                            sayi1--;
-                          }
-                        });
-                      },
-                      child: Text("<"),
-                    ),
-                    Image.asset(
-                      "images/tatli_$sayi1.jpg",
-                      height: 150,
-                      width: 150,
-                    ),
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          if (sayi1< 5) {
-                            sayi1++;
-                          }
-                          topla=corbafiyatlar[sayi-1]+yemekfiyatlari[sayi2-1]+tatlifiyatlar[sayi1-1];
-                        });
-                      },
-                      child: Text(">"),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Text(tatliadlar[sayi1 - 1]),
-            SizedBox(
-              width: 200,
-              child: Divider(
-                height: 5,
-              ),
-            ),
-            Text("Fiyat="+tatlifiyatlar[sayi1-1].toString()),
-            Expanded(
-              child: InkWell(
-                onTap: () {
-                  sayi2 = rastgelesayi();
-                  Yenile();
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          if (sayi2 > 1) {
-                            sayi2--;
-                          }
-                          topla=corbafiyatlar[sayi-1]+yemekfiyatlari[sayi2-1]+tatlifiyatlar[sayi1-1];
-                        });
-                      },
-                      child: Text("<"),
-                    ),
-                    Image.asset(
-                      "images/yemek_$sayi2.jpg",
-                      height: 150,
-                      width: 150,
-                    ),
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          if (sayi2< 5) {
-                            sayi2++;
-                          }
-                          topla=corbafiyatlar[sayi-1]+yemekfiyatlari[sayi2-1]+tatlifiyatlar[sayi1-1];
-                        });
-                      },
-                      child: Text(">"),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Text("Fiyat="+yemekfiyatlari[sayi2-1].toString()),
-            Text(yemekadlar[sayi2-1]),
-
-            SizedBox(
-              width: 200,
-              child: Divider(
-                height: 5,
-              ),
-            ),
-
-            Row(
-              children: [
-              TextButton(onPressed: () {
-
-              }, child: Text("Hesapla"),),
-                Container(
-                  height: 50,
-                  width: 50,
-                  child:Text(topla.toString()),
-                ),
-              ],
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
-  }
-
-  int rastgelesayi() {
-    return Random().nextInt(5) + 1;
-  }
-  void Yenile() {
-    setState(() {});
   }
 }
